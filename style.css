@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+body {
+  background-color: #03001c;
+  font-family: "Poppins", Courier, monospace;
+}
+
+.header-container ul {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas: "logo title report-problem";
+  align-items: center;
+  background-color: #301e67;
+  color: #fff;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  animation: fadeIn 1s ease;
+  border-radius: 30px;
+}
+.header-container a {
+  text-decoration: none;
+  color: white;
+}
+.logo img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.header-container li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.title {
+  grid-area: title;
+}
+
+.report-problem {
+  grid-area: report-problem;
+}
+
+.header-container.light-mode {
+  animation: headerSlide 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.main-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  overflow: auto;
+  flex-direction: row;
+}
+
+.main-menu div {
+  width: 350px;
+  height: 350px;
+  margin: 50px;
+  background-color: lightblue;
+}
+
+.choices {
+  width: 350px;
+  height: 350px;
+  margin: 20px;
+  background-color: lightblue;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+p {
+  margin: 0;
+  font-size: 18px;
+}
+footer p {
+  text-align: center;
+  color: #fff;
+}
+a {
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  .header-container ul {
+    grid-template-columns: auto;
+    grid-template-areas: "logo" "title" "report-problem";
+    text-align: center;
+  }
+}
